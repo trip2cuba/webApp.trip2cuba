@@ -1,0 +1,43 @@
+<md-dialog aria-label="Register"  ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h4>Entre sus Datos de Registro</h4>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Nombre</label>
+                <input ng-model="user.firstName">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Apellidos</label>
+                <input ng-model="user.firstName">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>email</label>
+                <input ng-model="user.firstName">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>password</label>
+                <input ng-model="user.firstName">
+            </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      <md-button ng-click="answer('not useful')" class="md-warn">
+       Cancelar
+      </md-button>
+      <md-button ng-click="answer('useful')" class="md-primary" style="margin-right:20px;">
+        Registrarse
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

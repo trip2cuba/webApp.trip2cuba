@@ -17,9 +17,10 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    //'ngTouch',
+    'ngMaterial'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,$mdThemingProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -31,7 +32,18 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/help', {
+        templateUrl: 'views/help.html',
+        controller: 'HelpCtrl',
+        controllerAs: 'help'
+      })
       .otherwise({
         redirectTo: '/'
       });
+
+    $mdThemingProvider
+      .theme('default')
+      .primaryPalette('teal')
+      .accentPalette('orange');
+      
   });
