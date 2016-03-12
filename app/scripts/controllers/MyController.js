@@ -72,3 +72,12 @@ function DialogController($scope, $mdDialog) {
     $mdDialog.hide(answer);
   };
 }
+
+//var app = angular.module('myApp', ['ngMaterial']);
+
+/*
+ * 'scroll' Angular Directive
+ * Used to handle page header during scroll event (and rezise event too) of the window.
+ *
+ */
+//app
