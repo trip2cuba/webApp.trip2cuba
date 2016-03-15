@@ -41,9 +41,6 @@ angular
         redirectTo: '/'
       });
 
-    $mdThemingProvider
-      .theme('default')
-      .primaryPalette('teal')
-      .accentPalette('orange');
+
       
   });

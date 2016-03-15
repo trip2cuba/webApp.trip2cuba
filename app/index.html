@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -26,13 +27,15 @@
     
     <!-- a partir de aqui es el codigo nuevo-->
     <header md-page-header>
-        <div md-header-picture style="background-image:url(http://www.shortday.in/wp-content/uploads/2015/06/Katy-Perry-wallpaper.jpg)"></div>
+        <div md-header-picture style="background-image:url(../images/prueba.jpg)"></div>
         <md-toolbar scroll>
-          <div class="md-toolbar-tools">
-            <md-button class="md-tools" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
-            <h2 md-header-title flex>Katy Perry</h2>
-            <md-button class="md-tools" aria-label="Edit Contact"><i class="ion-android-create"></i></md-button>
-            <md-button class="md-tools" aria-label="More"><i class="ion-android-more-vertical"></i></md-button>
+          <div class="md-toolbar-tools" layout-align = "end center">
+            
+            <h2 md-header-title flex> <a  href="#/">Trip2Cuba</a></h2>
+            <md-button class="md-tools" aria-label="Ayuda"><a  href="#/help">Ayuda</a></md-button>
+            <md-button class="md-tools" aria-label="Contactenos"><a href="#/about">Contactenos</a></md-button>
+            <md-button class="md-tools" aria-label="Registrarse" ng-click="showregisterDiag()">Registrarse</md-button>
+            <md-button class="md-tools" aria-label="Iniciar Sesion" ng-click="showloginDiag()">Iniciar Sesion</md-button>
           </div>
         </md-toolbar>
        <div class="main-fab"><md-button aria-label="Float Action Button" class="md-fab md-accent"><i class="ion-android-star"></i></md-button></div>
@@ -40,112 +43,11 @@
     <br /><br />
     <section id="page-section">
       <md-content>
-        <md-list>
-          <md-item>
-            <md-item-content>
-              <div class="md-tile-left">
-                <i class="ion-android-call"></i>
-              </div>
-              <div class="md-tile-content">
-                <i class="ion-android-hangout" style="float:right;margin-right:18px;margin-top:8px;color:#aaa;"></i>
-                <h3 style="padding-top:8px;">(950)555-1234</h3>
-                <p class="muted">
-                  Mobile
-                </p>
-              </div>
-            </md-item-content>
-          </md-item>
-          <md-item>
-            <md-item-content>
-              <div class="md-tile-left">
-                  
-              </div>
-              <div class="md-tile-content">
-                <i class="ion-android-hangout" style="float:right;margin-right:18px;color:#aaa;"></i>
-                <h3>(333)254-7851</h3>
-                <p class="muted">
-                  Work
-                </p>
-              </div>
-            </md-item-content>
-          </md-item>
-          
-          <md-divider></md-divider>
-          <md-item>
-            <md-item-content>
-              <div class="md-tile-left">
-                <i class="ion-android-mail"></i>
-              </div>
-              <div class="md-tile-content" >
-                <h3 style="padding-top:8px;">katyperryisme@mail.com</h3>
-                <p class="muted">
-                  Personal
-                </p>
-              </div>
-            </md-item-content>
-          </md-item>
-          <md-item>
-            <md-item-content>
-              <div class="md-tile-left">
-                  
-              </div>
-              <div class="md-tile-content">
-                <h3>katykate@mail.com</h3>
-                <p class="muted">
-                  Work
-                </p>
-              </div>
-            </md-item-content>
-          </md-item>
-          <md-divider></md-divider>
-          
-          <md-item>
-            <md-item-content>
-              <div class="md-tile-left">
-                <i class="ion-android-pin"></i>
-              </div>
-              <div class="md-tile-content" >
-                <h3 style="padding-top:8px;">2000 SW 1st Ave</h3>
-                <h3>San Fransisco, CA 94112</h3>
-                <p class="muted">Home</p>
-              </div>
-            </md-item-content>
-          </md-item>
-          <md-item>
-            <md-item-content>
-              <div class="md-tile-left">
-                  
-              </div>
-              <div class="md-tile-content">
-                <h3>1600 Amphitheatre Pkwy</h3>
-                <h3>Mountain View, CA 94043</h3>
-                <p class="muted">Work</p>
-              </div>
-            </md-item-content>
-          </md-item>
-          <md-divider></md-divider>
-          
-          
-        </md-list>
+        <div ng-view=""></div>
       </md-content>
     </section>
     <!-- aqui se acaba-->
 
-    <md-content>
-    <div ng-view=""></div>
-    </md-content>
-
-    <footer  >
-      <div layout="row" md-primary>
-        <div flex-gt-sm="66" flex="33">
-          flex 33% on mobile, <br>and 66% on gt-sm devices.
-        </div>
-      <div flex-gt-sm="33" flex="66">
-          flex 66%  on mobile, <br>and 33% on gt-sm devices.
-       </div>
-      </div>
-        
-    </footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
